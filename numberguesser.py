@@ -8,6 +8,10 @@ max = int(input("What's the highest value possible?"))
 number = random.randint(min, max)
 count = 0
 while True:
+	if count == 10:
+		print("You lost. Cmon man. The number was: ")
+		print(number)
+		break
 	guess = int(input("Guess a number: "))
 	if guess == number:
 		print("YAY you won!")
@@ -18,9 +22,5 @@ while True:
 	elif guess < number:
 		print("Too low")
 		count += 1
-	elif count == 10:
-		print("You lost. Cmon man. The number was: ")
-		print(number)
-		break
 	else:
 		print("You broke the system.")
